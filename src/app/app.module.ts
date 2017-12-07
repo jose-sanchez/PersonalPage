@@ -7,11 +7,13 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { AppComponent } from './app.component';
 import {AppRoutingModule} from './app-routing.module';
+import { LinkedImage } from './linked-image.component/linked-image.component.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LinkedImage.ComponentComponent
   ],
   imports: [
     BrowserModule,
