@@ -1,56 +1,98 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
-      <div class="navbar-header">
-          <a class="navbar-brand">
-            <img src="assets/img/ngx-bootstrap.svg" class="logo">
-          </a>
-          <span class="navbar-brand">Sanchez Simon, Jose Maria</span>
-      </div>
-      <ul class="nav navbar-nav">
-          <li class="active"><a href="#">
-            Link <span class="sr-only">(current)</span>
-          </a></li>
-          <li><a href="#">Link</a></li>
-          <li class="dropdown" dropdown> <!-- {1} -->
-              <a dropdownToggle role="button"> <!-- {2} -->
-                Dropdown <span class="caret"></span></a>
-              <ul *dropdownMenu class="dropdown-menu"> <!-- {3} -->
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Separated link</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">One more separated link</a></li>
-              </ul>
+    <div class="navbar-header">
+      <a class="navbar-brand">
+        <img src="assets/img/ngx-bootstrap.svg" class="logo">
+      </a>
+      <span class="navbar-brand">Sanchez Simon, Jose Maria</span>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active">
+        <a href="#">
+          Link
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">Link</a>
+      </li>
+      <li class="dropdown" dropdown>
+        <!-- {1} -->
+        <a dropdownToggle role="button">
+          <!-- {2} -->
+          Dropdown
+          <span class="caret"></span>
+        </a>
+        <ul *dropdownMenu class="dropdown-menu">
+          <!-- {3} -->
+          <li>
+            <a href="#">Action</a>
           </li>
-      </ul>
+          <li>
+            <a href="#">Another action</a>
+          </li>
+          <li>
+            <a href="#">Something else here</a>
+          </li>
+          <li role="separator" class="divider"></li>
+          <li>
+            <a href="#">Separated link</a>
+          </li>
+          <li role="separator" class="divider"></li>
+          <li>
+            <a href="#">One more separated link</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
   </div>
 </nav>
+<div>
+  <div class="row">
+    <div class="col-lg-3 col-centered"></div>
+    <div class="col-lg-6 col-centered">
+      <button class="btn btn-default" style="margin:20px;">
+        <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+      </button>
+      <button class="btn btn-default" style="margin:20px;">
+        <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+      </button>
+      <button class="btn btn-default" style="margin:20px;">
+        <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+      </button>
+      <button class="btn btn-default" style="margin:20px;">
+        <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+      </button>
+    </div>
+    <div class="col-lg-3 col-centered"></div>
+  </div>
+</div>
 
-<button type="button" class="btn btn-primary" 
-tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-Button with tooltip
+
+
+
+<!-- 
+
+<button type="button" class="btn btn-primary" tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+  Button with tooltip
 </button>
 
 
-<button type="button" class="btn btn-info" 
-(click)="openModal(template)">Create template modal</button>
+<button type="button" class="btn btn-info" (click)="openModal(template)">Create template modal</button>
 
 <ng-template #template>
-<div class="modal-header">
-<h4 class="modal-title pull-left">Modal</h4>
-<button type="button" class="close pull-right" 
-        aria-label="Close" (click)="modalRef.hide()">
-<span aria-hidden="true">&times;</span>
-</button>
-</div>
-<div class="modal-body">
-This is a modal.
-</div>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Modal</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    This is a modal.
+  </div>
 </ng-template>
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<!--<div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
   </h1>
@@ -59,13 +101,18 @@ This is a modal.
 <h2>Here are some links to help you start: </h2>
 <ul>
   <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
+    <h2>
+      <a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a>
+    </h2>
   </li>
   <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
+    <h2>
+      <a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a>
+    </h2>
   </li>
   <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
+    <h2>
+      <a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a>
+    </h2>
   </li>
-</ul>
-
+</ul> -->
