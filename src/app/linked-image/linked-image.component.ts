@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-linked-image.component',
-  templateUrl: './linked-image.component.component.html',
-  styleUrls: ['./linked-image.component.component.scss']
+  selector: 'app-linked-image',
+  templateUrl: './linked-image.component.html',
+  styleUrls: ['./linked-image.component.scss']
 })
-export class LinkedImage.ComponentComponent implements OnInit {
+export class LinkedImageComponent implements OnInit {
 
   constructor() { }
 
