@@ -10,6 +10,7 @@ import {AppRoutingModule} from './app-routing.module';
 import { LinkedImageComponent } from './linked-image/linked-image.component';
 import { PersonalDashboardComponent } from './personal-dashboard/personal-dashboard.component';
 import { InvestmentPortfolioComponent } from './investment-portfolio/investment-portfolio.component';
+import { ClickEditInputComponent } from './click-edit-input/click-edit-input.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { InvestmentPortfolioComponent } from './investment-portfolio/investment-
     AppComponent,
     LinkedImageComponent,
     PersonalDashboardComponent,
-    InvestmentPortfolioComponent
+    InvestmentPortfolioComponent,
+    ClickEditInputComponent
   ],
   imports: [
     BrowserModule,

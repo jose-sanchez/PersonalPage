@@ -1,0 +1,3 @@
+<label for="name">{{InputName}}</label>
+<input *ngIf="EditMode"  id="name" type="text" (focusout)="EditMode=false" value="{{Value}}" />
+<label *ngIf="!EditMode" for="input" (click)="EditMode=true">{{Value}}</label> 
