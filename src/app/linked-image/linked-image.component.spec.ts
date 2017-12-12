@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LinkedImage.ComponentComponent } from './linked-image.component.component';
+import { LinkedImageComponent } from './linked-image.component';
 
-describe('LinkedImage.ComponentComponent', () => {
-  let component: LinkedImage.ComponentComponent;
-  let fixture: ComponentFixture<LinkedImage.ComponentComponent>;
+describe('LinkedImageComponent', () => {
+  let component: LinkedImageComponent;
+  let fixture: ComponentFixture<LinkedImageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LinkedImage.ComponentComponent ]
+      declarations: [ LinkedImageComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LinkedImage.ComponentComponent);
+    fixture = TestBed.createComponent(LinkedImageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

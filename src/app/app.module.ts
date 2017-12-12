@@ -9,13 +9,15 @@ import { AppComponent } from './app.component';
 import {AppRoutingModule} from './app-routing.module';
 import { LinkedImageComponent } from './linked-image/linked-image.component';
 import { PersonalDashboardComponent } from './personal-dashboard/personal-dashboard.component';
+import { InvestmentPortfolioComponent } from './investment-portfolio/investment-portfolio.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LinkedImageComponent,
-    PersonalDashboardComponent
+    PersonalDashboardComponent,
+    InvestmentPortfolioComponent
   ],
   imports: [
     BrowserModule,
