@@ -6,11 +6,17 @@ import { IInvestmentItem } from '../models/index';
   templateUrl: './investment-item.component.html',
   styleUrls: ['./investment-item.component.scss']
 })
+
 export class InvestmentItemComponent implements OnInit {
   @Input() investment:IInvestmentItem;
-  constructor() { 
-    this.investment = {id:1,dividents:0,initialInvestment:0,investmentType:"t",name:"Roche",reinvestdividents:true,totaldividents:"0",totalInvestment:"0",years:0};
 
+  public investmentTypes = [
+    {value:'Housing', display:'Housing'},
+   {value:'Stocks', display:'Stocks'},
+   ];
+  constructor() { 
+    this.investment = {id:1,dividents:0,initialInvestmentAmount:0,initialInvestmentPrice:0,investmentType:"t",name:"Roche",reinvestdividents:true,totaldividents:"0",totalInvestment:"0",years:0};
+    this.investment.investmentType='Housing';
   }
 
   ngOnInit() {
@@ -19,4 +25,11 @@ export class InvestmentItemComponent implements OnInit {
   onInvestmentNameChange(name:string): void {
     this.investment.name = name;
   }
+
+  onInvestmentTypeChange(type:string): void {
+    this.investment.investmentType = type;
+    console.log('value is ',type);
+  }
+
+  
 }
