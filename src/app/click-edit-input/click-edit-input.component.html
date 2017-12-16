@@ -1,8 +1,4 @@
-<div width="200px">
-  <p>{{InputName}}</p>
-  <input *ngIf="EditMode" class="input" id="name" type="text" (focusout)="EditMode=false" value="{{Value}}" />
-  <div class="input" *ngIf="!EditMode" (click)="EditMode=true">
-    <span>{{Value}}></span> 
-  </div>
-</div>
-<!-- <input class="enjoy-css" placeholder="Enjoy" /> -->
+
+  <input [style.width.px]="Width" class="input" id="name" type="text" (focusout)="EditMode=false" (click)="EditMode=true"  (change)='changeValue()' [(ngModel)]="TextValue"/>
+
+

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output,EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-click-edit-input',
@@ -7,12 +7,19 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ClickEditInputComponent implements OnInit {
   @Input() InputName: string;
-  @Input() Value: string;
+  @Input() TextValue: string;
   @Input() EditMode: boolean;
+  @Input() Width: number;
+  @Output() ValueChange: EventEmitter<string> = new EventEmitter<string>();
   constructor() { }
 
   ngOnInit() {
     this.EditMode = false;
+    //this.Value ="pedo"
+  }
+
+  changeValue() {
+    this.ValueChange.emit(this.TextValue);
   }
 
 }

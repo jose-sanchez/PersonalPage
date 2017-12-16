@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 //Bootstrap Modules
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
@@ -11,6 +12,7 @@ import { LinkedImageComponent } from './linked-image/linked-image.component';
 import { PersonalDashboardComponent } from './personal-dashboard/personal-dashboard.component';
 import { InvestmentPortfolioComponent } from './investment-portfolio/investment-portfolio.component';
 import { ClickEditInputComponent } from './click-edit-input/click-edit-input.component';
+import { InvestmentItemComponent } from './investment-item/investment-item.component';
 
 
 @NgModule({
@@ -19,14 +21,16 @@ import { ClickEditInputComponent } from './click-edit-input/click-edit-input.com
     LinkedImageComponent,
     PersonalDashboardComponent,
     InvestmentPortfolioComponent,
-    ClickEditInputComponent
+    ClickEditInputComponent,
+    InvestmentItemComponent
   ],
   imports: [
     BrowserModule,
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
     ModalModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
