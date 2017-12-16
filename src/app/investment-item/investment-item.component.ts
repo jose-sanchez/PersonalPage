@@ -43,10 +43,6 @@ export class InvestmentItemComponent implements OnInit {
     this.investment.dividents = dividents;
   }
 
-  onReinvestDividentsChange(name:string): void {
-    this.investment.name = name;
-  }
-
   onYearsChange(years:number): void {
     this.investment.years = years;
   }
