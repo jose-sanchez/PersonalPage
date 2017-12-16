@@ -1,0 +1,35 @@
+
+
+.input-text {
+  display: inline-block;
+  padding: 6px 20px;
+  border: none;
+  font: normal 18px/normal "Coda", Helvetica, sans-serif;
+  color: rgba(0,142,198,1);
+
+}
+
+
+.input-text:hover {
+    color: rgb(143, 31, 109);
+}
+
+
+.input-text:focus {
+    color: rgb(70, 11, 230);
+}
+
+.input{
+    border-radius: 20px  ;
+    height: 30px;
+    width: 300px;
+    border: 2px solid #73AD21;
+    padding: 20px; 
+    text-align: center;
+    line-height: 30px;
+}
+
+span {
+    display: table-cell;
+    vertical-align: middle;
+  }

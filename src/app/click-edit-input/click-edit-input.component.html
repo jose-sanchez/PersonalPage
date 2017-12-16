@@ -1,3 +1,8 @@
-<label for="name">{{InputName}}</label>
-<input *ngIf="EditMode"  id="name" type="text" (focusout)="EditMode=false" value="{{Value}}" />
-<label *ngIf="!EditMode" for="input" (click)="EditMode=true">{{Value}}</label> 
+<div width="200px">
+  <p>{{InputName}}</p>
+  <input *ngIf="EditMode" class="input" id="name" type="text" (focusout)="EditMode=false" value="{{Value}}" />
+  <div class="input" *ngIf="!EditMode" (click)="EditMode=true">
+    <span>{{Value}}></span> 
+  </div>
+</div>
+<!-- <input class="enjoy-css" placeholder="Enjoy" /> -->
