@@ -22,14 +22,38 @@ export class InvestmentItemComponent implements OnInit {
   ngOnInit() {
   
   }
-  onInvestmentNameChange(name:string): void {
-    this.investment.name = name;
-  }
-
   onInvestmentTypeChange(type:string): void {
     this.investment.investmentType = type;
     console.log('value is ',type);
   }
+
+  onInvestmentNameChange(name:string): void {
+    this.investment.name = name;
+  }
+
+  onInitialInvestmentAmountChange(amount:number): void {
+    this.investment.initialInvestmentAmount = amount;
+  }
+
+  onInitialInvestmentPriceChange(price:number): void {
+    this.investment.initialInvestmentPrice = price;
+  }
+
+  onDividentsChange(dividents:number): void {
+    this.investment.dividents = dividents;
+  }
+
+  onReinvestDividentsChange(name:string): void {
+    this.investment.name = name;
+  }
+
+  onYearsChange(years:number): void {
+    this.investment.years = years;
+  }
+
+  
+
+
 
   
 }
