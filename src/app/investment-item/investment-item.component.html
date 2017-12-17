@@ -4,10 +4,14 @@
         </option>
     </select>
     <app-click-edit-input InputName="Investment Name" [TextValue]="investment.name" (ValueChange)="onInvestmentNameChange($event)"
-        EditMode="false" Width="300" class="investmentItem">Test</app-click-edit-input>
+        EditMode="false" Width="200" class="investmentItem">Test</app-click-edit-input>
     <app-click-edit-input InputName="Initial inv Amount" [TextValue]="investment.initialInvestmentAmount" (ValueChange)="onInitialInvestmentAmountChange($event)" EditMode="false" Width="100">Test</app-click-edit-input>
-    <app-click-edit-input InputName="Initial inv Price" [TextValue]="investment.initialInvestmentPrice" (ValueChange)="onInitialInvestmentPriceChange($event)" EditMode="false" Width="130">Test</app-click-edit-input>
+    <app-click-edit-input InputName="Initial inv Price" [TextValue]="investment.initialInvestmentPrice" (ValueChange)="onInitialInvestmentPriceChange($event)" EditMode="false" Width="100">Test</app-click-edit-input>
+    <label class="lbTotalAmount">{{investment.initialInvestmentAmount * investment.initialInvestmentPrice}}</label>
     <input type="checkbox" [checked]="investment.reinvestdividents" (change)="investment.reinvestdividents = !investment.reinvestdividents" />
     <app-click-edit-input InputName="Investment dividents per unit" [TextValue]="investment.dividents" (ValueChange)="onDividentsChange($event)" EditMode="false" Width="130">Test</app-click-edit-input>
-    <app-click-edit-input InputName="Years" [TextValue]="investment.years" (ValueChange)="onYearsChange($event)"  EditMode="false" Width="130">Test</app-click-edit-input>
+    <label class="lbTotalAmount">{{investment.initialInvestmentAmount * investment.dividents}}</label>
+    <app-click-edit-input InputName="Years" [TextValue]="investment.years" (ValueChange)="onYearsChange($event)"  EditMode="false" Width="70">Test</app-click-edit-input>
+    <label class="lbTotalAmount">{{investment.initialInvestmentAmount * investment.dividents}}</label>
+    
 </div>
