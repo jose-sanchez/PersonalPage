@@ -5,24 +5,40 @@
   <div class="panel panel-default">
     <div class="panel-heading panel-heading-custom">Current Investments</div>
     <div class="panel-body">
-      <div class="container" style="width: 500px">
-        <div class="row">
-                Investment Item
-
-                Amount
-
-                Initial  Total Investment
-                Initial  Total Investment
+      <div style="display: inline-flex">
+        <div style="width: 150px">
+          Inv Type
         </div>
-
-        <div class="row">
-            <app-investment-item></app-investment-item>
+        <div style="width: 145px">
+          Inv Name
+        </div>
+        <div style="width: 100px">
+          Amount
+        </div>
+        <div style="width: 130px">
+          Init Price
+        </div>
+        <div style="width: 110px">
+          Total Inv
+        </div>
+        <div style="width: 70px">
+            RI Div
+        </div>
+        <div style="width: 100px">
+            Dividents
+        </div>
+        <div style="width: 140px">
+            Total Dividents
+        </div>
+        <div style="width: 100px">
+            Years
+        </div>
+        <div style="width: 100px">
+            Total benefits
         </div>
       </div>
-      
-      
-      
 
+      <app-investment-item *ngFor="let investmentItem of investmentList" [investment]="investmentItem"></app-investment-item>
     </div>
   </div>
   <div class="panel panel-primary">
