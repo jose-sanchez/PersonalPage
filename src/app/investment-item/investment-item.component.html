@@ -13,5 +13,7 @@
     <label class="lbTotalAmount">{{investment.initialInvestmentAmount * investment.dividents}}</label>
     <app-click-edit-input InputName="Years" [TextValue]="investment.years" (ValueChange)="onYearsChange($event)"  EditMode="false" Width="70">Test</app-click-edit-input>
     <label class="lbTotalAmount">{{investment.initialInvestmentAmount * investment.dividents}}</label>
-    
+    <button type="button" class="btn btn-default btn-xs">
+        <span class="glyphicon glyphicon-minus"></span> 
+    </button>
 </div>
