@@ -13,7 +13,8 @@ import { PersonalDashboardComponent } from './personal-dashboard/personal-dashbo
 import { InvestmentPortfolioComponent } from './investment-portfolio/investment-portfolio.component';
 import { ClickEditInputComponent } from './click-edit-input/click-edit-input.component';
 import { InvestmentItemComponent } from './investment-item/investment-item.component';
-
+import {NgReduxModule,NgRedux} from 'ng2-redux';
+import {store,IAppState} from './store';
 
 @NgModule({
   declarations: [
@@ -31,8 +32,15 @@ import { InvestmentItemComponent } from './investment-item/investment-item.compo
     ModalModule.forRoot(),
     AppRoutingModule,
     FormsModule,
+    NgReduxModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+    //  !! this constructor is required to wire up NGRedux with Angular
+    constructor(ngRedux:NgRedux<IAppState>)
+    {
+      ngRedux.provideStore(store);
+    }
+ }
