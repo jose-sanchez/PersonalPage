@@ -5,6 +5,7 @@ import { map } from 'rxjs/operators/map';
 import { catchError } from 'rxjs/operators/catchError';
 import { mergeMap } from 'rxjs/operator/mergeMap'
 import 'rxjs/add/operator/catch';
+import 'rxjs/add/observable/of'
 import { IInvestmentItem } from './models'
 //For method getInvestmentsHttpModule
 import { Http, Response } from '@angular/http';
@@ -14,14 +15,16 @@ const investmentNodeJsApiUrl = "http://localhost:3000/API/investments/"
 @Injectable()
 export class InvestmentService {
 
-    constructor(private _htpp: Http) { }
+    //constructor(private _htpp: Http) { }
+    constructor() { }
 
-    public getInvestments() {
+    public getInvestments(): Observable<IInvestmentItem[]>{
 
-        let investmentList: IInvestmentItem[];
-        investmentList = [{ id: 1, dividents: 0, initialInvestmentAmount: 0, initialInvestmentPrice: 0, investmentType: "t", name: "Roche", reinvestdividents: true, totaldividents: "0", totalInvestment: "0", years: 0 },
-        { id: 1, dividents: 0, initialInvestmentAmount: 0, initialInvestmentPrice: 0, investmentType: "t", name: "Nestle", reinvestdividents: true, totaldividents: "0", totalInvestment: "0", years: 0 },
-        { id: 1, dividents: 0, initialInvestmentAmount: 0, initialInvestmentPrice: 0, investmentType: "t", name: "Roche AG", reinvestdividents: true, totaldividents: "0", totalInvestment: "0", years: 0 },];
+        let investmentList: Array<IInvestmentItem> = null;
+        investmentList = [{ id: 1, dividents: 0, initialInvestmentAmount: 0, initialInvestmentPrice: 0, investmentType: "Housing", name: "Roche", reinvestdividents: true, totaldividents: "0", totalInvestment: "0", years: 0 },
+        { id: 1, dividents: 0, initialInvestmentAmount: 0, initialInvestmentPrice: 0, investmentType: "Housing", name: "Nestle", reinvestdividents: true, totaldividents: "0", totalInvestment: "0", years: 0 },
+        { id: 1, dividents: 0, initialInvestmentAmount: 0, initialInvestmentPrice: 0, investmentType: "Housing", name: "Roche AG", reinvestdividents: true, totaldividents: "0", totalInvestment: "0", years: 0 },];
+        return Observable.of(investmentList);
     }
 
     //ExampleCallApi - needs refactoring
