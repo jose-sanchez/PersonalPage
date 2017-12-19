@@ -11,6 +11,8 @@ import {AppRoutingModule} from './app-routing.module';
 import { LinkedImageComponent } from './linked-image/linked-image.component';
 import { PersonalDashboardComponent } from './personal-dashboard/personal-dashboard.component';
 import { InvestmentPortfolioComponent } from './investment-portfolio/investment-portfolio.component';
+import { InvestmentActions } from './investment-portfolio/investment-portfolio.actions';
+import { InvestmentService } from './investment.service';
 import { ClickEditInputComponent } from './click-edit-input/click-edit-input.component';
 import { InvestmentItemComponent } from './investment-item/investment-item.component';
 import {NgReduxModule,NgRedux} from 'ng2-redux';
@@ -34,7 +36,7 @@ import {store,IAppState} from './store';
     FormsModule,
     NgReduxModule,
   ],
-  providers: [],
+  providers: [InvestmentService,InvestmentActions],
   bootstrap: [AppComponent]
 })
 export class AppModule {
