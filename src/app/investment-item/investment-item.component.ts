@@ -15,12 +15,11 @@ export class InvestmentItemComponent implements OnInit {
    {value:'Stocks', display:'Stocks'},
    ];
   constructor() { 
-    this.investment = {id:1,dividents:0,initialInvestmentAmount:0,initialInvestmentPrice:0,investmentType:"t",name:"Roche",reinvestdividents:true,totaldividents:"0",totalInvestment:"0",years:0};
-    this.investment.investmentType='Housing';
+
   }
 
   ngOnInit() {
-  
+ 
   }
   onInvestmentTypeChange(type:string): void {
     this.investment.investmentType = type;
