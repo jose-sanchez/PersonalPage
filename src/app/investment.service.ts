@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
 //Is important to specify the path so that just the specific code is load and the size of the request is smaller
-
-
 import { Observable } from 'rxjs/Observable';
 import { map } from 'rxjs/operators/map';
 import { catchError } from 'rxjs/operators/catchError';
