@@ -1,6 +1,6 @@
 import { IAppState } from './IAppState';
 import { IInvestmentItem } from '../models';
-import { GET_INVESTMENTS,REMOVE_INVESTMENTS } from '../investment-portfolio/investment-portfolio.actions'
+import { GET_INVESTMENTS,REMOVE_INVESTMENTS,ADD_INVESTMENTS } from '../investment-portfolio/investment-portfolio.actions'
 
 //Initial State before implementing calls to Api
 const InitialInvestments:IInvestmentItem[] =
@@ -26,7 +26,6 @@ const InitialState: IAppState =
 
 function storeInvestments(state,action):IAppState
 {
-   // return InitialState;
     return Object.assign({},state,{
         investments:action.investments
 
@@ -35,9 +34,16 @@ function storeInvestments(state,action):IAppState
 
 function removeInvestment(state,action):IAppState
 {
-   // return InitialState;
     return Object.assign({},state,{
         investments: state.investments.filter(obj => obj !== action.investment),
+
+    })
+}
+
+function addInvestment(state,action):IAppState
+{
+    return Object.assign({},state,{
+        investments: [...state.investments,action.investment],
 
     })
 }
@@ -47,6 +53,8 @@ export function reducer(state=InitialState,action){
         return storeInvestments(state,action);
         case REMOVE_INVESTMENTS:
         return removeInvestment(state,action);
+        case ADD_INVESTMENTS:
+        return addInvestment(state,action);
         default:
         return state;
     }
