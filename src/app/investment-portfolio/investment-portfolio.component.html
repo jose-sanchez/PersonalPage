@@ -37,8 +37,7 @@
             Total benefits
         </div>
       </div>
-
-      <app-investment-item *ngFor="let investmentItem of investmentList$ | async" [investment]="investmentItem"></app-investment-item>
+      <app-investment-item *ngFor="let investmentItem of investmentList$ | async" [investment]="investmentItem" (RemoveClick)="onRemoveClick($event)"></app-investment-item>
     </div>
   </div>
   <div class="panel panel-primary">

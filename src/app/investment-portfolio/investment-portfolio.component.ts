@@ -22,4 +22,9 @@ export class InvestmentPortfolioComponent implements OnInit {
         console.log(this.investmentList$.count);
   }
 
+  
+  onRemoveClick(investment:IInvestmentItem): void {
+    this.investmentListActions.RemoveInvestment(investment);
+    console.log(investment);
+  }
 }
