@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { IInvestmentItem } from '../models/index';
 
 @Component({
@@ -9,11 +9,12 @@ import { IInvestmentItem } from '../models/index';
 
 export class InvestmentItemComponent implements OnInit {
   @Input() investment:IInvestmentItem;
-
+  @Output() RemoveClick: EventEmitter<IInvestmentItem> = new EventEmitter<IInvestmentItem>();
   public investmentTypes = [
     {value:'Housing', display:'Housing'},
    {value:'Stocks', display:'Stocks'},
    ];
+   
   constructor() { 
 
   }
@@ -44,6 +45,10 @@ export class InvestmentItemComponent implements OnInit {
 
   onYearsChange(years:number): void {
     this.investment.years = years;
+  }
+
+  onRemoveClick(): void {
+    this.RemoveClick.emit(this.investment);
   }
 
   
