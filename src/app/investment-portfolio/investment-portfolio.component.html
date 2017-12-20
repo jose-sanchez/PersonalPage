@@ -38,6 +38,9 @@
         </div>
       </div>
       <app-investment-item *ngFor="let investmentItem of investmentList$ | async" [investment]="investmentItem" (RemoveClick)="onRemoveClick($event)"></app-investment-item>
+      <button type="button" class="btn btn-default btn-xs" (click)="onAddClick()">
+          <span class="glyphicon glyphicon-plus"></span> 
+      </button>
     </div>
   </div>
   <div class="panel panel-primary">

@@ -27,4 +27,10 @@ export class InvestmentPortfolioComponent implements OnInit {
     this.investmentListActions.RemoveInvestment(investment);
     console.log(investment);
   }
+
+  onAddClick(): void {
+    let investment:IInvestmentItem = { id: 1, dividents: 0, initialInvestmentAmount: 0, initialInvestmentPrice: 0, investmentType: "Housing", name: "", reinvestdividents: false, totaldividents: "0", totalInvestment: "0", years: 0 };
+    this.investmentListActions.AddInvestment(investment);
+    console.log(investment);
+  }
 }
