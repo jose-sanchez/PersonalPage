@@ -5,6 +5,7 @@ import { InvestmentService } from '../investment.service';
 import { IInvestmentItem} from '../models/index';
 export const GET_INVESTMENTS = 'investments/GET'
 export const REMOVE_INVESTMENTS = 'investments/REMOVE'
+export const ADD_INVESTMENTS = 'investments/ADD'
 
 @Injectable()
 export class InvestmentActions{
@@ -26,6 +27,13 @@ export class InvestmentActions{
   public RemoveInvestment(investment:IInvestmentItem){
     this.ngRedux.dispatch({
         type:REMOVE_INVESTMENTS,
+        investment
+      });
+  }
+
+  public AddInvestment(investment:IInvestmentItem){
+    this.ngRedux.dispatch({
+        type:ADD_INVESTMENTS,
         investment
       });
   }
