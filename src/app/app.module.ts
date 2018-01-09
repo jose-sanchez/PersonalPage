@@ -17,6 +17,8 @@ import { ClickEditInputComponent } from './click-edit-input/click-edit-input.com
 import { InvestmentItemComponent } from './investment-item/investment-item.component';
 import {NgReduxModule,NgRedux} from 'ng2-redux';
 import {store,IAppState} from './store';
+import { BinanceTradingHelperComponent } from './binance-trading-helper/binance-trading-helper.component';
+import { BinanceSymbolComponent } from './binance-symbol/binance-symbol.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import {store,IAppState} from './store';
     PersonalDashboardComponent,
     InvestmentPortfolioComponent,
     ClickEditInputComponent,
-    InvestmentItemComponent
+    InvestmentItemComponent,
+    BinanceTradingHelperComponent,
+    BinanceSymbolComponent
   ],
   imports: [
     BrowserModule,
