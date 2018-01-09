@@ -1,0 +1,69 @@
+<!-- <p>Pair
+  <label class="lbTotalAmount">{{binanceSymbol.pair}}</label>
+</p>
+<p>price
+  <label class="lbTotalAmount">{{binanceSymbol.price}}</label>
+</p>
+<p>mainCurrencyAmount
+  <label class="lbTotalAmount">{{binanceSymbol.mainCurrencyAmount}}</label>
+</p>
+<p>currencyAmount
+  <label class="lbTotalAmount">{{binanceSymbol.currencyAmount}}</label>
+</p>
+<p>benefitAgainstBoughtprice
+  <label class="lbTotalAmount">{{binanceSymbol.benefitAgainstBoughtprice}}</label>
+</p>
+<p>benefitAgainstSoldprice
+  <label class="lbTotalAmount">{{binanceSymbol.benefitAgainstSoldprice}}</label>
+</p>
+<p>maxPrice
+  <label class="lbTotalAmount">{{binanceSymbol.maxPrice}}</label>
+</p>
+<p>minPrice
+  <label class="lbTotalAmount">{{binanceSymbol.minPrice}}</label>
+</p>
+<p>StrTradingState
+  <label class="lbTotalAmount">{{binanceSymbol.StrTradingState}}</label>
+</p> -->
+
+<div class="panel panel-primary" style="max-width: 600px;">
+  <div class="panel-heading" >Pair: {{binanceSymbol.pair}} Price: {{binanceSymbol.price}}</div>
+  <div class="panel-body" style="max-width: 300px;display:inline-flex">
+    <div class="panel panel-primary" style="margin-left: 10px">
+      <div class="panel-heading">Buy</div>
+      <div class="panel-body">
+        <p>mainCurrencyAmount
+          <label class="lbTotalAmount">{{binanceSymbol.mainCurrencyAmount}}</label>
+        </p>
+        <p>benefitAgainstSoldprice
+          <label class="lbTotalAmount">{{binanceSymbol.benefitAgainstSoldprice}}</label>
+        </p>
+        <p>minPrice
+          <label class="lbTotalAmount">{{binanceSymbol.minPrice}}</label>
+        </p>
+        <p>price
+          <label class="lbTotalAmount">{{binanceSymbol.price}}</label>
+        </p>
+      </div>
+    </div>
+    <div class="panel panel-primary" style="margin-left: 10px">
+      <div class="panel-heading">Sell</div>
+      <div class="panel-body">
+        <p>currencyAmount
+          <label class="lbTotalAmount">{{binanceSymbol.currencyAmount}}</label>
+        </p>
+        <p>benefitAgainstBoughtprice
+          <label class="lbTotalAmount">{{binanceSymbol.benefitAgainstBoughtprice}}</label>
+        </p>
+        <p>maxPrice
+          <label class="lbTotalAmount">{{binanceSymbol.maxPrice}}</label>
+        </p>
+        <p>price
+          <label class="lbTotalAmount">{{binanceSymbol.price}}</label>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="panel-footer">
+    <label class="lbTotalAmount">{{binanceSymbol.StrTradingState}}</label></div>
+</div>
