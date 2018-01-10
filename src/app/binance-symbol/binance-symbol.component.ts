@@ -29,7 +29,7 @@ export class BinanceSymbolComponent implements OnInit {
       maxPrice: 0, 
       minPrice: 0, 
       StrTradingState: "WaitingForOportunity"},
-    
+    priceService.connect(this.binanceSymbol.pair);
     priceService.messages.subscribe(data => this.onPriceUpdate(data)); 
     this.OportunityLimitPorcentage = 0.3
     this.StoplostPorcentage = 0.001
@@ -165,7 +165,7 @@ export class BinanceSymbolComponent implements OnInit {
     Sell(BidSellPrice.Price, CurrencyAmount);
     client.PlaceOrder(Symbol, OrderSide.Sell, OrderType.Limit, TimeInForce.ImmediateOrCancel, CurrencyAmount, sellPrice);
     */ 
-    symbol.mainCurrencyAmount = symbol.currencyAmount * symbol.price;
+    symbol.mainCurrencyAmount = symbol.currencyAmount * symbol.price - (symbol.currencyAmount * symbol.price) * this.fee;
     symbol.currencyAmount = 0;
     symbol.lastSoldprice = symbol.price;
     symbol.minPrice = symbol.lastSoldprice;
@@ -181,7 +181,7 @@ export class BinanceSymbolComponent implements OnInit {
   client.PlaceOrder(Symbol, OrderSide.Buy, OrderType.Limit, TimeInForce.GoodTillCancel, CurrencyAmount, price);
     */ 
 
-    symbol.currencyAmount  = symbol.mainCurrencyAmount / symbol.price;
+    symbol.currencyAmount  = symbol.mainCurrencyAmount / symbol.price - (symbol.mainCurrencyAmount / symbol.price )* this.fee;
     symbol.lastBoughtprice = symbol.price;
     symbol.maxPrice = symbol.lastBoughtprice;
     symbol.mainCurrencyAmount = 0;

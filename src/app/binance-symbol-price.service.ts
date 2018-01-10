@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs/Rx';
 import { WebsocketService } from './websocket.service';
 
-const CHAT_URL = 'wss://stream.binance.com:9443/ws/trxeth@aggTrade';
+const SYMBOLTRADE_URL = 'wss://stream.binance.com:9443/ws/';
 
 export interface Message {
 	p: string,
@@ -12,16 +12,20 @@ export interface Message {
 @Injectable()
 export class BinanceSymbolPriceService {
 	public messages: Subject<Message>;
+	constructor(private wsService: WebsocketService) {
 
-	constructor(wsService: WebsocketService) {
-		this.messages = <Subject<Message>>wsService
-			.connect(CHAT_URL)
-			.map((response: MessageEvent): Message => {
-				let data = JSON.parse(response.data);
-				return {
-					p: data.p,
-
-				}
-			});
 	}
+	public connect(symbolPair:string){
+		this.messages = <Subject<Message>> this.wsService
+		.connect(SYMBOLTRADE_URL + symbolPair + '@aggTrade')
+		.map((response: MessageEvent): Message => {
+			let data = JSON.parse(response.data);
+			return {
+				p: data.p,
+
+			}
+		});
+	}
+
+
 }
