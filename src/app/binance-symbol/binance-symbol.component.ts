@@ -11,8 +11,9 @@ import { IBinanceSymbol } from '../models/index';
 })
 
 export class BinanceSymbolComponent implements OnInit {
- OportunityLimitPorcentage:number;  
- StoplostPorcentage:number; 
+ private OportunityLimitPorcentage:number;  
+ private StoplostPorcentage:number; 
+ private fee:number; 
   
   binanceSymbol:IBinanceSymbol;
   constructor(private priceService: BinanceSymbolPriceService) { 
@@ -32,6 +33,7 @@ export class BinanceSymbolComponent implements OnInit {
     priceService.messages.subscribe(data => this.onPriceUpdate(data)); 
     this.OportunityLimitPorcentage = 0.3
     this.StoplostPorcentage = 0.001
+    this.fee =0.1; 
  /*  priceService.messages.subscribe(msg => {			
     console.log("Response from websocket: " + msg.toString());
   });  */
